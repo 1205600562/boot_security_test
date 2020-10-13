@@ -1,0 +1,126 @@
+2020-10-12 19:21:54,435 [http-nio-8080-exec-8] ==>  Preparing: select * from sys_user t where t.username = ? 
+2020-10-12 19:21:54,443 [http-nio-8080-exec-8] ==> Parameters: user(String)
+2020-10-12 19:21:54,453 [http-nio-8080-exec-8] <==      Total: 1
+2020-10-12 19:21:54,459 [http-nio-8080-exec-8] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2020-10-12 19:21:54,462 [http-nio-8080-exec-8] ==> Parameters: 2(Long)
+2020-10-12 19:21:54,468 [http-nio-8080-exec-8] <==      Total: 28
+2020-10-12 19:21:54,581 [taskExecutor-1] ==>  Preparing: insert into sys_logs(userId, module, flag, remark, createTime) values(?, ?, ?, ?, now()) 
+2020-10-12 19:21:54,587 [taskExecutor-1] ==> Parameters: 2(Long), 登陆(String), true(Boolean), null
+2020-10-12 19:21:54,588 [taskExecutor-1] <==    Updates: 1
+2020-10-12 19:21:54,947 [http-nio-8080-exec-1] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
+2020-10-12 19:21:54,949 [http-nio-8080-exec-1] ==> Parameters: 2(Long)
+2020-10-12 19:21:54,951 [http-nio-8080-exec-1] <==      Total: 1
+2020-10-12 19:23:53,405 [http-nio-8080-exec-7] ==>  Preparing: select * from t_dict t where t.type = ? 
+2020-10-12 19:23:53,406 [http-nio-8080-exec-7] ==> Parameters: userStatus(String)
+2020-10-12 19:23:53,408 [http-nio-8080-exec-7] <==      Total: 3
+2020-10-12 19:23:53,493 [http-nio-8080-exec-9] ==>  Preparing: select count(1) from sys_user t 
+2020-10-12 19:23:53,494 [http-nio-8080-exec-9] ==> Parameters: 
+2020-10-12 19:23:53,496 [http-nio-8080-exec-9] <==      Total: 1
+2020-10-12 19:23:53,498 [http-nio-8080-exec-9] ==>  Preparing: select * from sys_user t order by username desc, nickname asc limit ?, ? 
+2020-10-12 19:23:53,501 [http-nio-8080-exec-9] ==> Parameters: 0(Integer), 10(Integer)
+2020-10-12 19:23:53,503 [http-nio-8080-exec-9] <==      Total: 2
+2020-10-12 19:24:03,867 [http-nio-8080-exec-1] ==>  Preparing: select count(1) from sys_user t WHERE t.username like concat('%', ?, '%') 
+2020-10-12 19:24:03,868 [http-nio-8080-exec-1] ==> Parameters: u(String)
+2020-10-12 19:24:03,870 [http-nio-8080-exec-1] <==      Total: 1
+2020-10-12 19:24:03,871 [http-nio-8080-exec-1] ==>  Preparing: select * from sys_user t WHERE t.username like concat('%', ?, '%') order by username desc, nickname asc limit ?, ? 
+2020-10-12 19:24:03,872 [http-nio-8080-exec-1] ==> Parameters: u(String), 0(Integer), 10(Integer)
+2020-10-12 19:24:03,874 [http-nio-8080-exec-1] <==      Total: 1
+2020-10-12 19:24:14,384 [http-nio-8080-exec-4] ==>  Preparing: select count(1) from sys_user t 
+2020-10-12 19:24:14,385 [http-nio-8080-exec-4] ==> Parameters: 
+2020-10-12 19:24:14,386 [http-nio-8080-exec-4] <==      Total: 1
+2020-10-12 19:24:14,387 [http-nio-8080-exec-4] ==>  Preparing: select * from sys_user t order by username desc, nickname asc limit ?, ? 
+2020-10-12 19:24:14,388 [http-nio-8080-exec-4] ==> Parameters: 0(Integer), 10(Integer)
+2020-10-12 19:24:14,391 [http-nio-8080-exec-4] <==      Total: 2
+2020-10-12 19:24:17,681 [http-nio-8080-exec-6] ==>  Preparing: select count(1) from sys_user t WHERE t.username like concat('%', ?, '%') 
+2020-10-12 19:24:17,682 [http-nio-8080-exec-6] ==> Parameters: u(String)
+2020-10-12 19:24:17,682 [http-nio-8080-exec-6] <==      Total: 1
+2020-10-12 19:24:17,683 [http-nio-8080-exec-6] ==>  Preparing: select * from sys_user t WHERE t.username like concat('%', ?, '%') order by username desc, nickname asc limit ?, ? 
+2020-10-12 19:24:17,684 [http-nio-8080-exec-6] ==> Parameters: u(String), 0(Integer), 10(Integer)
+2020-10-12 19:24:17,685 [http-nio-8080-exec-6] <==      Total: 1
+2020-10-12 19:24:20,467 [http-nio-8080-exec-10] ==>  Preparing: select * from t_dict t where t.type = ? 
+2020-10-12 19:24:20,468 [http-nio-8080-exec-10] ==> Parameters: sex(String)
+2020-10-12 19:24:20,469 [http-nio-8080-exec-10] <==      Total: 2
+2020-10-12 19:24:20,483 [http-nio-8080-exec-8] ==>  Preparing: select * from sys_role t 
+2020-10-12 19:24:20,484 [http-nio-8080-exec-8] ==> Parameters: 
+2020-10-12 19:24:20,485 [http-nio-8080-exec-8] <==      Total: 2
+2020-10-12 19:24:24,235 [http-nio-8080-exec-10] ==>  Preparing: select * from sys_permission t order by t.sort 
+2020-10-12 19:24:24,236 [http-nio-8080-exec-10] ==> Parameters: 
+2020-10-12 19:24:24,241 [http-nio-8080-exec-10] <==      Total: 39
+2020-10-12 19:24:26,705 [http-nio-8080-exec-9] ==>  Preparing: select count(1) from sys_role t 
+2020-10-12 19:24:26,706 [http-nio-8080-exec-9] ==> Parameters: 
+2020-10-12 19:24:26,708 [http-nio-8080-exec-9] <==      Total: 1
+2020-10-12 19:24:26,710 [http-nio-8080-exec-9] ==>  Preparing: select * from sys_role t order by updateTime desc limit ?, ? 
+2020-10-12 19:24:26,711 [http-nio-8080-exec-9] ==> Parameters: 0(Integer), 10(Integer)
+2020-10-12 19:24:26,712 [http-nio-8080-exec-9] <==      Total: 2
+2020-10-12 19:24:31,961 [http-nio-8080-exec-7] ==>  Preparing: select * from sys_permission t order by t.sort 
+2020-10-12 19:24:31,961 [http-nio-8080-exec-7] ==> Parameters: 
+2020-10-12 19:24:31,964 [http-nio-8080-exec-7] <==      Total: 39
+2020-10-12 19:24:31,990 [http-nio-8080-exec-1] ==>  Preparing: select * from sys_role t where t.id = ? 
+2020-10-12 19:24:31,991 [http-nio-8080-exec-1] ==> Parameters: 1(Long)
+2020-10-12 19:24:31,992 [http-nio-8080-exec-1] <==      Total: 1
+2020-10-12 19:24:32,001 [http-nio-8080-exec-8] ==>  Preparing: select p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId where rp.roleId = ? order by p.sort 
+2020-10-12 19:24:32,002 [http-nio-8080-exec-8] ==> Parameters: 1(Long)
+2020-10-12 19:24:32,006 [http-nio-8080-exec-8] <==      Total: 39
+2020-10-12 19:24:52,282 [http-nio-8080-exec-1] ==>  Preparing: select count(1) from sys_role t 
+2020-10-12 19:24:52,282 [http-nio-8080-exec-1] ==> Parameters: 
+2020-10-12 19:24:52,283 [http-nio-8080-exec-1] <==      Total: 1
+2020-10-12 19:24:52,284 [http-nio-8080-exec-1] ==>  Preparing: select * from sys_role t order by updateTime desc limit ?, ? 
+2020-10-12 19:24:52,285 [http-nio-8080-exec-1] ==> Parameters: 0(Integer), 10(Integer)
+2020-10-12 19:24:52,286 [http-nio-8080-exec-1] <==      Total: 2
+2020-10-12 19:24:57,079 [http-nio-8080-exec-2] ==>  Preparing: select * from sys_permission t order by t.sort 
+2020-10-12 19:24:57,080 [http-nio-8080-exec-2] ==> Parameters: 
+2020-10-12 19:24:57,082 [http-nio-8080-exec-2] <==      Total: 39
+2020-10-12 19:24:57,100 [http-nio-8080-exec-6] ==>  Preparing: select * from sys_role t where t.id = ? 
+2020-10-12 19:24:57,100 [http-nio-8080-exec-6] ==> Parameters: 1(Long)
+2020-10-12 19:24:57,101 [http-nio-8080-exec-6] <==      Total: 1
+2020-10-12 19:24:57,109 [http-nio-8080-exec-4] ==>  Preparing: select p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId where rp.roleId = ? order by p.sort 
+2020-10-12 19:24:57,109 [http-nio-8080-exec-4] ==> Parameters: 1(Long)
+2020-10-12 19:24:57,112 [http-nio-8080-exec-4] <==      Total: 39
+2020-10-12 19:25:06,056 [http-nio-8080-exec-6] ==>  Preparing: select count(1) from sys_role t 
+2020-10-12 19:25:06,056 [http-nio-8080-exec-6] ==> Parameters: 
+2020-10-12 19:25:06,058 [http-nio-8080-exec-6] <==      Total: 1
+2020-10-12 19:25:06,059 [http-nio-8080-exec-6] ==>  Preparing: select * from sys_role t order by updateTime desc limit ?, ? 
+2020-10-12 19:25:06,060 [http-nio-8080-exec-6] ==> Parameters: 0(Integer), 10(Integer)
+2020-10-12 19:25:06,061 [http-nio-8080-exec-6] <==      Total: 2
+2020-10-12 19:25:07,509 [http-nio-8080-exec-5] ==>  Preparing: select count(1) from file_info t 
+2020-10-12 19:25:07,510 [http-nio-8080-exec-5] ==> Parameters: 
+2020-10-12 19:25:07,513 [http-nio-8080-exec-5] <==      Total: 1
+2020-10-12 19:26:04,620 [http-nio-8080-exec-8] ==>  Preparing: select * from t_dict t where t.type = ? 
+2020-10-12 19:26:04,620 [http-nio-8080-exec-8] ==> Parameters: noticeStatus(String)
+2020-10-12 19:26:04,622 [http-nio-8080-exec-8] <==      Total: 2
+2020-10-12 19:26:04,667 [http-nio-8080-exec-5] ==>  Preparing: select count(1) from t_notice t 
+2020-10-12 19:26:04,668 [http-nio-8080-exec-5] ==> Parameters: 
+2020-10-12 19:26:04,669 [http-nio-8080-exec-5] <==      Total: 1
+2020-10-12 19:26:12,663 [http-nio-8080-exec-3] ==>  Preparing: select count(1) from t_job t 
+2020-10-12 19:26:12,664 [http-nio-8080-exec-3] ==> Parameters: 
+2020-10-12 19:26:12,665 [http-nio-8080-exec-3] <==      Total: 1
+2020-10-12 19:26:44,308 [http-nio-8080-exec-10] ==>  Preparing: select * from sys_permission t where t.type = 1 order by t.sort 
+2020-10-12 19:26:44,309 [http-nio-8080-exec-10] ==> Parameters: 
+2020-10-12 19:26:44,310 [http-nio-8080-exec-10] <==      Total: 16
+2020-10-12 19:26:44,322 [http-nio-8080-exec-4] ==>  Preparing: select * from sys_permission t where t.id = ? 
+2020-10-12 19:26:44,323 [http-nio-8080-exec-4] ==> Parameters: 26(Long)
+2020-10-12 19:26:44,324 [http-nio-8080-exec-4] <==      Total: 1
+2020-10-12 19:26:46,390 [http-nio-8080-exec-1] ==>  Preparing: select * from sys_permission t order by t.sort 
+2020-10-12 19:26:46,390 [http-nio-8080-exec-1] ==> Parameters: 
+2020-10-12 19:26:46,392 [http-nio-8080-exec-1] <==      Total: 39
+2020-10-12 19:27:29,948 [http-nio-8080-exec-6] ==>  Preparing: select count(1) from sys_user t 
+2020-10-12 19:27:29,949 [http-nio-8080-exec-6] ==> Parameters: 
+2020-10-12 19:27:29,950 [http-nio-8080-exec-6] <==      Total: 1
+2020-10-12 19:27:29,952 [http-nio-8080-exec-6] ==>  Preparing: select * from sys_user t order by username desc, nickname asc limit ?, ? 
+2020-10-12 19:27:29,953 [http-nio-8080-exec-6] ==> Parameters: 0(Integer), 10(Integer)
+2020-10-12 19:27:29,954 [http-nio-8080-exec-6] <==      Total: 2
+2020-10-12 19:29:11,042 [http-nio-8080-exec-2] ==>  Preparing: select * from sys_permission t where t.type = 1 order by t.sort 
+2020-10-12 19:29:11,042 [http-nio-8080-exec-2] ==> Parameters: 
+2020-10-12 19:29:11,043 [http-nio-8080-exec-2] <==      Total: 16
+2020-10-12 19:29:11,055 [http-nio-8080-exec-1] ==>  Preparing: select * from sys_permission t where t.id = ? 
+2020-10-12 19:29:11,055 [http-nio-8080-exec-1] ==> Parameters: 34(Long)
+2020-10-12 19:29:11,056 [http-nio-8080-exec-1] <==      Total: 1
+2020-10-12 19:29:24,166 [http-nio-8080-exec-10] ==>  Preparing: update sys_permission t set parentId = ?, name = ?, css = ?, href = ?, type = ?, permission = ?, sort = ? where t.id = ? 
+2020-10-12 19:29:24,167 [http-nio-8080-exec-10] ==> Parameters: 0(Long), excel导出(String), fa-arrow-circle-down(String), pages/excel/sql.html(String), 1(Integer), (String), 16(Integer), 34(Long)
+2020-10-12 19:29:24,169 [http-nio-8080-exec-10] <==    Updates: 1
+2020-10-12 19:29:24,170 [taskExecutor-2] ==>  Preparing: insert into sys_logs(userId, module, flag, remark, createTime) values(?, ?, ?, ?, now()) 
+2020-10-12 19:29:24,171 [taskExecutor-2] ==> Parameters: 2(Long), 修改菜单(String), true(Boolean), null
+2020-10-12 19:29:24,173 [taskExecutor-2] <==    Updates: 1
+2020-10-12 19:29:25,435 [http-nio-8080-exec-4] ==>  Preparing: select * from sys_permission t order by t.sort 
+2020-10-12 19:29:25,436 [http-nio-8080-exec-4] ==> Parameters: 
+2020-10-12 19:29:25,438 [http-nio-8080-exec-4] <==      Total: 39
